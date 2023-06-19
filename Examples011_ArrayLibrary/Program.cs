@@ -1,16 +1,16 @@
-﻿void FillArray(int[] collection)
+﻿void FillArray(int[] collection)                         // Заполнить массив
 {
     int length = collection.Length;
     int index = 0;
     while (index < length)
     {
-        collection[index] = new Random().Next(1, 10);
+        collection[index] = new Random().Next(1, 10);    // Обратиться к параметру collection и положить в него новое случайное число с диапозона 1, 10
         //index = index+1;
         index++;
     }
 }
 
-void PrintArray(int[] col)
+void PrintArray(int[] col)                                // Печатает массив
 {
     int count = col.Length;
     int position = 0;
@@ -38,7 +38,7 @@ int IndexOf(int[] collection, int find)
 return position;
 }
 
-int[] array = new int[10];
+int[] array = new int[10];                                  //Создай новый массив в котором будет 10 элементов
 
 FillArray(array);
 PrintArray(array);
