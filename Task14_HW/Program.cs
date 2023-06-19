@@ -13,7 +13,20 @@ int ReadInt(string message)
     return value;
 }
 
-int number = ReadInt("Введите трехзначное число -> ");
-int value = number / 10 % 10;
+bool Validate3sign(int number)
+{
+    if (number >= 100 && number < 1000)
+    {
+        return true;
+    }
 
+    System.Console.WriteLine("Число не трехзначное");
+    return false;
+}
+
+int num = ReadInt("Введите трехзначное число -> ");
+if (Validate3sign(num))
+{
+int value = num / 10 % 10;
 System.Console.WriteLine($"{value}");
+}
