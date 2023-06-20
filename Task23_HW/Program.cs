@@ -34,7 +34,7 @@ bool CheckIn(int number)
     return false;
 }
 
-int number = ReadInt("Введите целое положительное число >");
+int number = ReadInt("Введите пятизначное число >");
 
 if (Validate5sign(number))
 {
