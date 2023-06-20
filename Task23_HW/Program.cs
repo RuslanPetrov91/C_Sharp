@@ -12,7 +12,7 @@ int ReadInt(string message)
     return value;
 }
 
-bool Minimum3sign(int number)
+bool Validate5sign(int number)
 {
     if (number >= 10000 && number <= 99999)
     {
@@ -36,7 +36,7 @@ bool CheckIn(int number)
 
 int number = ReadInt("Введите целое положительное число >");
 
-if (Minimum3sign(number))
+if (Validate5sign(number))
 {
     if (CheckIn (number))
     {
