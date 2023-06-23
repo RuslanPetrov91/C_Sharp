@@ -1,6 +1,4 @@
-﻿// Напишите программу, 
-// которая принимает на вход пятизначное число (N) 
-// и проверяет, является ли число палиндромом.
+﻿// Напишите программу, которая принимает на вход пятизначное число (N) и проверяет, является ли число палиндромом.
 // 14212 -> нет
 // 23432 -> да
 // 12821 -> да
@@ -12,34 +10,27 @@ int ReadInt(string message)
     return value;
 }
 
-bool Validate5sign(int number)
+int Reverse(int number)
 {
-    if (number >= 10000 && number <= 99999)
+    int reverse = 0;
+    while (number > 0)
     {
-        return true;
+        reverse = reverse * 10 + number % 10;
+        number /= 10;
     }
 
-    System.Console.WriteLine("Введено не пятизначное число");
-    return false;
+    return reverse;
 }
 
-bool CheckIn(int number)
-{
-    if (number / 10000 % 10 == number % 10 && number / 1000 % 10 == number / 10 % 10)
-    {
-        return true;
-    }
+int number = ReadInt("Введите число >");
 
-    System.Console.WriteLine("Это не палиндром");
-    return false;
+int reverse = Reverse(number);
+
+if (reverse == number)
+{
+    System.Console.WriteLine($"{number} является палиндромом");
 }
-
-int number = ReadInt("Введите пятизначное число >");
-
-if (Validate5sign(number))
+else
 {
-    if (CheckIn (number))
-    {
-        System.Console.WriteLine("Это палиндром");
-    }
+    System.Console.WriteLine($"{number} не является палиндромом");
 }
